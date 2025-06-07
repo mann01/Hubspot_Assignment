@@ -1,0 +1,1113 @@
+Starting script...
+Environment variables loaded and validated
+HubSpot client initialized
+Attempting to connect to MongoDB...
+Connected to MongoDB
+Starting data pull...
+Inside pullDataFromHubspot function
+Found 1 domains with HubSpot integration enabled
+Processing domain: Test Account
+Domain data: {
+  "status": true,
+  "accounts": [
+    {
+      "lastPulledDates": {
+        "companies": "2023-01-29T01:49:14.863Z",
+        "contacts": "2023-01-29T01:49:15.670Z",
+        "deals": "2020-01-01T00:00:00.000Z",
+        "calls": "2023-01-20T01:00:06.307+00:00",
+        "emails": "2023-01-20T01:00:06.307+00:00",
+        "meetings": "2023-01-29T01:49:16.781+00:00",
+        "formFills": "2023-01-20T01:00:06.307+00:00",
+        "communications": "2023-01-20T01:00:06.307+00:00",
+        "marketingEmails": "2023-01-20T01:00:06.307+00:00",
+        "tasks": "2023-01-20T01:00:06.307+00:00"
+      },
+      "_id": "63819267c90f51b47d04ff30",
+      "accessToken": "CJaU7P7KMhISggOAUAAASCAAAABYAgEAAAGAGMTi7gwgrPOoFSia0CEyFAwWMAJYKcsVPm…",
+      "hubId": "26980676",
+      "hubDomain": "Work Sample Test-dev-26980676.com",
+      "refreshToken": "eu1-64c2-0705-4a5b-87a9-1812616e7560",
+      "paused": false,
+      "canWrite": true,
+      "afters": {},
+      "actions": [],
+      "configuration": {}
+    }
+  ]
+}
+Processing HubSpot account: 26980676
+Attempting to refresh access token...
+Making token refresh API call...
+Token refresh API call successful
+Access token refreshed successfully
+fetch contact batch
+process contacts
+fetch company batch
+fetch company batch
+fetch company batch
+fetch company batch
+fetch company batch
+process companies
+ApiException [Error]: HTTP-Code: 400
+Message: An error occurred.
+Body: {"status":"error","message":"There was a problem with the request.","correlationId":"a43108e3-70a5-4757-ac56-d1d427847a03"}
+Headers: {"access-control-allow-credentials":"false","cf-cache-status":"DYNAMIC","cf-ray":"94c22f03e80f9a8f-NAG","connection":"close","content-length":"123","content-type":"application/json;charset=utf-8","date":"Sat, 07 Jun 2025 18:23:58 GMT","nel":"{\"success_fraction\":0.01,\"report_to\":\"cf-nel\",\"max_age\":604800}","report-to":"{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=BYqjI15dzZSfhseaZ9F2yXTjSkeVfK%2FH%2BE%2F2CnLPtOB%2F8UiYgAahVVUVQyR5xpOiBBZYPTjayUct4pxGeom%2Fak7Wx73h2UmiHxmbTlFeIL8Ygdn9ROA40tBaKfoUKYOjCpeaIL2xRHz5rIL5\"}],\"group\":\"cf-nel\",\"max_age\":604800}","server":"cloudflare","set-cookie":"__cf_bm=x10tJgXbayQGCvUyfdIyYDCGzJMWS5._7dzfTlRZsaY-1749320638-1.0.1.1-YbivSGVFKBIWCyIXMVa7yzIXCw7b0qlzjvs4CsXHP6ouysjm04ogkbDU2uiOqcKwxWjWdCapj__oCCYDhi0XZbAdSIB6knmSKmzkHn7WzOM; path=/; expires=Sat, 07-Jun-25 18:53:58 GMT; domain=.hubapi.com; HttpOnly; Secure; SameSite=None","strict-transport-security":"max-age=31536000; includeSubDomains; preload","vary":"origin, Accept-Encoding","x-content-type-options":"nosniff","x-hubspot-correlation-id":"a43108e3-70a5-4757-ac56-d1d427847a03"}
+    at SearchApiResponseProcessor.<anonymous> (/Users/mj/Documents/api-sample-test/node_modules/@hubspot/api-client/lib/codegen/crm/objects/meetings/apis/SearchApi.js:63:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/mj/Documents/api-sample-test/node_modules/@hubspot/api-client/lib/codegen/crm/objects/meetings/apis/SearchApi.js:5:58)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 400,
+  body: {
+    status: 'error',
+    message: 'There was a problem with the request.',
+    correlationId: 'a43108e3-70a5-4757-ac56-d1d427847a03'
+  },
+  headers: {
+    'access-control-allow-credentials': 'false',
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '94c22f03e80f9a8f-NAG',
+    connection: 'close',
+    'content-length': '123',
+    'content-type': 'application/json;charset=utf-8',
+    date: 'Sat, 07 Jun 2025 18:23:58 GMT',
+    nel: '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}',
+    'report-to': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=BYqjI15dzZSfhseaZ9F2yXTjSkeVfK%2FH%2BE%2F2CnLPtOB%2F8UiYgAahVVUVQyR5xpOiBBZYPTjayUct4pxGeom%2Fak7Wx73h2UmiHxmbTlFeIL8Ygdn9ROA40tBaKfoUKYOjCpeaIL2xRHz5rIL5"}],"group":"cf-nel","max_age":604800}',
+    server: 'cloudflare',
+    'set-cookie': '__cf_bm=x10tJgXbayQGCvUyfdIyYDCGzJMWS5._7dzfTlRZsaY-1749320638-1.0.1.1-YbivSGVFKBIWCyIXMVa7yzIXCw7b0qlzjvs4CsXHP6ouysjm04ogkbDU2uiOqcKwxWjWdCapj__oCCYDhi0XZbAdSIB6knmSKmzkHn7WzOM; path=/; expires=Sat, 07-Jun-25 18:53:58 GMT; domain=.hubapi.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+    vary: 'origin, Accept-Encoding',
+    'x-content-type-options': 'nosniff',
+    'x-hubspot-correlation-id': 'a43108e3-70a5-4757-ac56-d1d427847a03'
+  }
+} {
+  apiKey: '92ee9e4a8b15fc058046998d5e9fbe',
+  metadata: { operation: 'processMeetings', hubId: '26980676' }
+}
+[
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-02-17T04:48:43.189Z,
+    includeInAnalytics: 0,
+    identity: 'emailmaria@hubspot.com',
+    userProperties: {
+      contact_name: 'Maria Johnson (Sample Contact)',
+      contact_title: 'Salesperson',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-03-18T01:56:28.190Z,
+    includeInAnalytics: 0,
+    identity: 'john@doe.com',
+    userProperties: {
+      contact_name: 'John Doe',
+      contact_title: 'Who knows!',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-03-18T02:02:58.334Z,
+    includeInAnalytics: 0,
+    identity: 'jjob1993@gmail.com',
+    userProperties: {
+      contact_name: 'Jay Job',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-02-17T06:22:51.551Z,
+    includeInAnalytics: 0,
+    identity: 'john@company1.com',
+    userProperties: {
+      contact_name: 'John Smith',
+      contact_title: 'CEO',
+      contact_source: 'OFFLINE',
+      contact_status: 'NEW',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-03-06T06:33:34.353Z,
+    includeInAnalytics: 0,
+    identity: 'jennifer@company4.com',
+    userProperties: {
+      company_id: '7049276381',
+      contact_name: 'Jennifer Michaels',
+      contact_title: 'COO',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-03-18T04:04:48.625Z,
+    includeInAnalytics: 0,
+    identity: 'johnjacob@southwest.com',
+    userProperties: {
+      contact_name: 'John Jacob',
+      contact_title: 'Pilot',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-03-18T04:24:09.551Z,
+    includeInAnalytics: 0,
+    identity: 'kramer@southwest.com',
+    userProperties: {
+      contact_name: 'James Kramer',
+      contact_title: 'Analyst',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-02-17T04:48:43.474Z,
+    includeInAnalytics: 0,
+    identity: 'bh@hubspot.com',
+    userProperties: {
+      contact_name: 'Brian Halligan (Sample Contact)',
+      contact_title: 'CEO',
+      contact_source: 'OFFLINE',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Contact Created',
+    actionDate: 2023-02-17T06:25:23.410Z,
+    includeInAnalytics: 0,
+    identity: 'michael@company4.com',
+    userProperties: {
+      company_id: '7049276381',
+      contact_name: 'Michael Gibson',
+      contact_title: 'CTO',
+      contact_source: 'OFFLINE',
+      contact_status: 'NEW',
+      contact_score: 0
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380301',
+      company_domain: 'audible.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108363',
+      company_domain: 'canon-europe.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108150',
+      company_domain: 'mintecglobal.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108142',
+      company_domain: 'unity.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108359',
+      company_domain: 'wolterskluwer.com',
+      company_industry: 'PUBLISHING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108392',
+      company_domain: 'eunasolutions.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108620',
+      company_domain: 'htjr.io',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380070',
+      company_domain: 'illumina.com',
+      company_industry: 'BIOTECHNOLOGY'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380076',
+      company_domain: 'siriusxm.com',
+      company_industry: 'BROADCAST_MEDIA'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380564',
+      company_domain: 'walmartconnect.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108381',
+      company_domain: 'dotdashmeredith.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887020,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380335',
+      company_domain: 'vzbiz.biz',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108611',
+      company_domain: 'cushmanwakefield.com',
+      company_industry: 'REAL_ESTATE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108352',
+      company_domain: 'revvitysignals.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380293',
+      company_domain: 'exitfive.com',
+      company_industry: 'RESTAURANTS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380064',
+      company_domain: 'dnb.com',
+      company_industry: 'FINANCIAL_SERVICES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380809',
+      company_domain: 'tgleaders.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380294',
+      company_domain: 'farfetchgroupcareers.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108651',
+      company_domain: 'arkonline.org',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380542',
+      company_domain: 'vincebrooks.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108644',
+      company_domain: 'esriuk.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380797',
+      company_domain: 'csgi.com',
+      company_industry: 'INFORMATION_TECHNOLOGY_AND_SERVICES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380800',
+      company_domain: 'testaccount.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380808',
+      company_domain: 'nacro.org.uk',
+      company_industry: 'NON_PROFIT_ORGANIZATION_MANAGEMENT'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380576',
+      company_domain: 'ebayinc.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888277,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380578',
+      company_domain: 'koddi.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108606',
+      company_domain: 'pg.com',
+      company_industry: 'CONSUMER_GOODS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108399',
+      company_domain: 'wish.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1676614878691,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '7047717356',
+      company_domain: 'company3.com',
+      company_industry: 'MEDIA_PRODUCTION'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1676614907094,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '7049276381',
+      company_domain: 'company4.com',
+      company_industry: 'AIRLINES_AVIATION'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380815',
+      company_domain: 'knowbe4.com',
+      company_industry: 'COMPUTER_NETWORK_SECURITY'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108130',
+      company_domain: 'axioshq.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380310',
+      company_domain: 'experianplc.com',
+      company_industry: 'BANKING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380079',
+      company_domain: 'boomi.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108658',
+      company_domain: 'ideagen.com',
+      company_industry: 'EDUCATION_MANAGEMENT'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380336',
+      company_domain: 'webmd.com',
+      company_industry: 'ONLINE_MEDIA'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380317',
+      company_domain: 'willowtreeapps.com',
+      company_industry: 'FOOD_BEVERAGES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380803',
+      company_domain: 'velocity.black',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380587',
+      company_domain: 'upperdeck.com',
+      company_industry: 'MECHANICAL_OR_INDUSTRIAL_ENGINEERING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108109',
+      company_domain: 'skipthedishes.com',
+      company_industry: 'RESTAURANTS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108126',
+      company_domain: 'radancy.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887020,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380061',
+      company_domain: 'concur.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380316',
+      company_domain: 'theknotworldwide.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108615',
+      company_domain: 'novatech.co.uk',
+      company_industry: 'COMPUTER_HARDWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380794',
+      company_domain: 'marketingops.com',
+      company_industry: 'PROFESSIONAL_TRAINING_COACHING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887020,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380311',
+      company_domain: 'lifeatspotify.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108364',
+      company_domain: 'delltechnologies.com',
+      company_industry: 'CONSUMER_ELECTRONICS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108390',
+      company_domain: 'hypcccycl.com',
+      company_industry: 'EDUCATION_MANAGEMENT'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380057',
+      company_domain: 'peak.community',
+      company_industry: 'CONSUMER_SERVICES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380300',
+      company_domain: 'forbescommcouncil.com',
+      company_industry: 'HIGHER_EDUCATION'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380543',
+      company_domain: 'g-p.com',
+      company_industry: 'HUMAN_RESOURCES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380561',
+      company_domain: 'sageworld.com',
+      company_industry: 'MARKETING_AND_ADVERTISING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108868',
+      company_domain: 'niche.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380298',
+      company_domain: 'shiftdigital.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108863',
+      company_domain: 'alludo.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108121',
+      company_domain: 'forsta.wiki',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887020,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380292',
+      company_domain: 'stopandshop.com',
+      company_industry: 'SUPERMARKETS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108861',
+      company_domain: 'lifeguarddh.com',
+      company_industry: 'TELECOMMUNICATIONS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380814',
+      company_domain: 'influitive.com',
+      company_industry: 'INFORMATION_TECHNOLOGY_AND_SERVICES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108407',
+      company_domain: 'aviso.com',
+      company_industry: 'PROFESSIONAL_TRAINING_COACHING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108408',
+      company_domain: 'digital-science.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108870',
+      company_domain: 'efuse.gg',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108865',
+      company_domain: 'atira.bc.ca',
+      company_industry: 'NON_PROFIT_ORGANIZATION_MANAGEMENT'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380322',
+      company_domain: 'frontier.co.uk',
+      company_industry: 'COMPUTER_GAMES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887020,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380320',
+      company_domain: 'system1.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887021,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380078',
+      company_domain: 'gtnr.it',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108657',
+      company_domain: 'bhvr.com',
+      company_industry: 'CONSUMER_ELECTRONICS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380555',
+      company_domain: 'cyncly.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380804',
+      company_domain: '7shifts.com',
+      company_industry: 'EDUCATION_MANAGEMENT'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817889309,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474052856',
+      company_domain: 'copperleaf.com',
+      company_industry: 'CONSTRUCTION'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380573',
+      company_domain: 'neteasegames.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108626',
+      company_domain: 'indexexchange.com',
+      company_industry: 'MARKETING_AND_ADVERTISING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108120',
+      company_domain: 'unybrands.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380810',
+      company_domain: 'tebra.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380807',
+      company_domain: 'ims.tech',
+      company_industry: 'INSURANCE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380548',
+      company_domain: 'team17.com',
+      company_industry: 'COMPUTER_GAMES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108368',
+      company_domain: 'ans.co.uk',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380599',
+      company_domain: 'connectrn.com',
+      company_industry: 'TELECOMMUNICATIONS'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380796',
+      company_domain: 'pollardbanknote.com',
+      company_industry: 'MECHANICAL_OR_INDUSTRIAL_ENGINEERING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380560',
+      company_domain: 'mtch.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108396',
+      company_domain: 'achievers.com',
+      company_industry: 'HUMAN_RESOURCES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817889309,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474052853',
+      company_domain: 'homecareassistancevancouver.ca',
+      company_industry: 'HOSPITAL_HEALTH_CARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108370',
+      company_domain: 'criticalmass.com',
+      company_industry: null
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380601',
+      company_domain: 'disneycareers.com',
+      company_industry: 'ENTERTAINMENT'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380562',
+      company_domain: 'iris.co.uk',
+      company_industry: 'INFORMATION_TECHNOLOGY_AND_SERVICES'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380579',
+      company_domain: 'square-enix-games.com',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888276,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9473380567',
+      company_domain: 'patientpoint.com',
+      company_industry: 'PROFESSIONAL_TRAINING_COACHING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887680,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108358',
+      company_domain: 'resolver.com',
+      company_industry: 'MECHANICAL_OR_INDUSTRIAL_ENGINEERING'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108619',
+      company_domain: 'arrayofstars.com',
+      company_industry: 'GRAPHIC_DESIGN'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817888864,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108628',
+      company_domain: 'apartments.com',
+      company_industry: 'REAL_ESTATE'
+    }
+  },
+  {
+    actionName: 'Company Created',
+    actionDate: 1704817887681,
+    includeInAnalytics: 0,
+    companyProperties: {
+      company_id: '9474108146',
+      company_domain: 'idr.co',
+      company_industry: 'COMPUTER_SOFTWARE'
+    }
+  },
+  ... 326 more items
+]
+drain queue
+finish processing account
+finish processing domain
